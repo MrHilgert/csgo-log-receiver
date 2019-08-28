@@ -1,6 +1,6 @@
 {
   "name": "csgo-log-receiver",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "the simple receiver logs from source dedicated server",
   "main": "index.js",
   "scripts": {
