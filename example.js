@@ -11,7 +11,7 @@ receiver.registerSource({
     password: '12345'
 });
 
-receiver.on('error', ({server, error}) => {
+receiver.on('err', ({server, error}) => {
     console.error('Error on server', receiver.stringifyServerId(server), '#' + error);
 });
 
