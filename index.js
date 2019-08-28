@@ -65,7 +65,7 @@ class Server extends EventEmmiter {
         let parsedMessage = this.parser.parse(message, senderInfo);
 
         if (parsedMessage.error)
-            return this.emit('error', {
+            return this.emit('err', {
                 server: senderInfo,
                 error: parsedMessage.error
             });
