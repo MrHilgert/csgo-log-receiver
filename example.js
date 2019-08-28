@@ -1,12 +1,12 @@
 const logReceiver = require('./index');
 
 const receiver = new logReceiver({
-    host: '127.0.0.1',
+    host: '192.168.1.5',
     port: 9871
 });
 
 receiver.registerSource({
-    address: '127.0.0.1',
+    address: '192.168.1.5',
     port: 27015,
     password: '12345'
 });

@@ -37,11 +37,12 @@ class PacketParser {
 
         let packetType = message[4];
 
-        if (packetType === MAGIC.bytePassword) {
-            
-            let serverOpts = this.server.getSource(senderInfo);
+        let serverOpts = this.server.getSource(senderInfo);
 
-            if(!serverOpts) return false;
+        if(!serverOpts) return false;
+
+        if (packetType === MAGIC.bytePassword) {
+            if(!serverOpts.password) return false;
 
             let receivedPassword = this.extractPassword(message);
 
@@ -51,6 +52,8 @@ class PacketParser {
 
             return true;
 
+        }else if(packetType === MAGIC.byteNoPassword) {
+            if(!serverOpts.password) return true;
         }
 
         return false;
