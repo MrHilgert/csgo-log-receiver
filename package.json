@@ -1,5 +1,5 @@
 {
-  "name": "@hilgert/csgo-log-receiver",
+  "name": "csgo-log-receiver",
   "version": "1.0.2",
   "description": "the simple receiver logs from source dedicated server",
   "main": "index.js",
