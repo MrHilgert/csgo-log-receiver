@@ -59,6 +59,11 @@ class Server extends EventEmmiter {
         this.socket.bind(this.opts.port, this.opts.host);
     }
 
+    closeSocket(cb) {
+        if(!this.socket) return;
+        this.socket.close(cb);
+    }
+
     handler(message, senderInfo) {
         if (!this.getSource(senderInfo)) return;
 
